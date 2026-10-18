@@ -1,7 +1,4 @@
 import { useState } from 'react'
-import heroImg from './assets/hero.png'
-import reactLogo from './assets/react.svg'
-import viteLogo from './assets/vite.svg'
 import brandImage from './assets/dev-brand-image.jpg'
 import './App.css'
 import ItemCard from "./components/ItemCard.tsx";
@@ -50,34 +47,31 @@ function App() {
   return (
     <>
     <section id="header">
-    <header>
-      <div id="brand-image">
-        <img class="brand-image" src={brandImage} />
-      </div>
-    
-    <nav>
-      <a href="#home">Home</a> | 
-      <a href="#about">About</a>
-    </nav>
-    </header>
+      <header>
+        <div id="brand-image">
+          <img className="brand-image" src={brandImage} />
+        </div>
+        <nav>
+          <a href="#home">Home</a> | 
+          <a href="#about">About</a>
+        </nav>
+      </header>
     </section>
       <section id="center">
         <section>
-        Welcome to the catelog
+          <p>Welcome to the catelog</p>
         </section>
-        {/* <ItemCard /> */}
-        <section class="product-grid">
-        {products.map((product) => (
-  <ItemCard 
-    key={product.id} 
-    name={product.name} 
-    price={product.price} 
-    imageUrl={product.image} 
-  />
-))}
-</section>
+        <section className="product-grid">
+            {products.map((product) => (
+                      <ItemCard 
+                        key={product.id} 
+                        name={product.name} 
+                        price={product.price} 
+                        imageUrl={product.image} 
+                      />
+              ))}
+        </section>
       </section>
-
       <section id="next-steps">
       </section>
       <section id="spacer"></section>
